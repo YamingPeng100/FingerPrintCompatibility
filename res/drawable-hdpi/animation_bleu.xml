@@ -6,11 +6,20 @@
     <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
-    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="500" />
+    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
     <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="300" />
+    <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="50" />
+    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="50" />
+    <item android:drawable="@drawable/lum_cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_bleu_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_bleu_sans_print" android:duration="500" />
     
     
     

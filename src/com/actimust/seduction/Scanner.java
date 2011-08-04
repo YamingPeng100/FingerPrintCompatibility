@@ -12,6 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class Scanner extends Activity {
 	
@@ -39,8 +40,7 @@ public class Scanner extends Activity {
         print_blue = (ImageView) findViewById(R.id.print_blue);
 //        print_blue.setVisibility(View.INVISIBLE);
         
-        LinearLayout mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
-        
+        RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);
         mainLayout.setOnTouchListener( onTouchListener);
         
     }
