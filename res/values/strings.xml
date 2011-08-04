@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, Scanner!</string>
     <string name="app_name">Finger Compatibility</string>
+    <string name="r1">GAGNE</string>
+    
 </resources>

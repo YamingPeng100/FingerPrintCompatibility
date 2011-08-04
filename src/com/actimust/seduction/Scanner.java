@@ -2,16 +2,17 @@ package com.actimust.seduction;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 public class Scanner extends Activity {
@@ -19,11 +20,8 @@ public class Scanner extends Activity {
 	private ImageView print_red;
 	private ImageView print_blue;
 	
-	
-    private static final int INVALID_POINTER_ID = -1;
-
-	 // The ‘active pointer’ is the one currently moving our object.
-
+	private Vibrator vibrator;
+	private long[] pattern = {10,500,100,500,100,500};
     
     /** Called when the activity is first created. */
     @Override
@@ -36,12 +34,12 @@ public class Scanner extends Activity {
         
         setContentView(R.layout.fingers_main);
         print_red = (ImageView) findViewById(R.id.print_red);
-//        print_red.setVisibility(View.INVISIBLE);
         print_blue = (ImageView) findViewById(R.id.print_blue);
-//        print_blue.setVisibility(View.INVISIBLE);
         
         RelativeLayout mainLayout = (RelativeLayout)findViewById(R.id.mainLayout);
         mainLayout.setOnTouchListener( onTouchListener);
+        
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         
     }
     
@@ -60,11 +58,13 @@ public class Scanner extends Activity {
 		            	//Partie haute de l'ecran
 //		            	print_red.setVisibility(View.VISIBLE);
 		            	print_red.setVisibility(View.GONE);
+		            	vibrator.vibrate(pattern, -1);
 		            	animate(R.id.print_red, R.drawable.animation_red);
 		            }else if(yMax/2<y && y<yMax){
 		            	//Partie basse de l'ecran
 //		            	print_blue.setVisibility(View.VISIBLE);
 		            	print_blue.setVisibility(View.GONE);
+		            	vibrator.vibrate(pattern, -1);
 		            	animate(R.id.print_blue, R.drawable.animation_bleu);
 		            }
 		            break;
@@ -86,11 +86,11 @@ public class Scanner extends Activity {
 		            if(0<y && y<yMax/2){
 		            	//Partie haute de l'ecran
 //		            	print_red.setVisibility(View.VISIBLE);
-		            	animate(R.id.print_red, R.drawable.animation_red);
+		            	animateAndShowResult(R.id.print_red, R.drawable.animation_red);
 		            }else if(yMax/2<y && y<yMax){
 		            	//Partie basse de l'ecran
 //		            	print_blue.setVisibility(View.VISIBLE);
-		            	animate(R.id.print_blue, R.drawable.animation_bleu);
+		            	animateAndShowResult(R.id.print_blue, R.drawable.animation_bleu);
 		            }
 		            break;
 		        }
@@ -122,12 +122,29 @@ public class Scanner extends Activity {
     };
     
     private void animate(int imageViewId, int animationId){
-//		sensorMgr.unregisterListener(this);
 		
 		Runnable registerSensorRunnable = new Runnable(){
 			@Override
 			public void run() {
 //				sensorMgr.registerListener(Cloche.this, mAccelerometer, SensorManager.SENSOR_ACCELEROMETER);
+			}
+		};
+		
+		ImageView imgView = (ImageView)findViewById(imageViewId);
+		imgView.setVisibility(ImageView.VISIBLE);
+		imgView.setBackgroundResource(animationId);
+		
+		registerAnimation(imageViewId, registerSensorRunnable);
+		
+	}
+    
+    private void animateAndShowResult(int imageViewId, int animationId){
+		
+		Runnable registerSensorRunnable = new Runnable(){
+			@Override
+			public void run() {
+				Intent myIntent = new Intent(Scanner.this, Resultat.class);
+                startActivity(myIntent);
 			}
 		};
 		

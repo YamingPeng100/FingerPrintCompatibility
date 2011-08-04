@@ -18,7 +18,7 @@
     <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="50" />
     <item android:drawable="@drawable/cadre_red_avec_print" android:duration="50" />
     <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="100" />
-    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="2000" />
     <item android:drawable="@drawable/cadre_red_sans_print" android:duration="500" />
     
     
