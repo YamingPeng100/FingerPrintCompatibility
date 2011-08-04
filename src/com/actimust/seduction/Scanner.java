@@ -4,6 +4,7 @@ package com.actimust.seduction;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,9 +35,9 @@ public class Scanner extends Activity {
         
         setContentView(R.layout.fingers_main);
         print_red = (ImageView) findViewById(R.id.print_red);
-        print_red.setVisibility(View.INVISIBLE);
+//        print_red.setVisibility(View.INVISIBLE);
         print_blue = (ImageView) findViewById(R.id.print_blue);
-        print_blue.setVisibility(View.INVISIBLE);
+//        print_blue.setVisibility(View.INVISIBLE);
         
         LinearLayout mainLayout = (LinearLayout)findViewById(R.id.mainLayout);
         
@@ -57,10 +58,14 @@ public class Scanner extends Activity {
 	//	            
 		            if(0<y && y<yMax/2){
 		            	//Partie haute de l'ecran
-		            	print_red.setVisibility(View.VISIBLE);
+//		            	print_red.setVisibility(View.VISIBLE);
+		            	print_red.setVisibility(View.GONE);
+		            	animate(R.id.print_red, R.drawable.animation_red);
 		            }else if(yMax/2<y && y<yMax){
 		            	//Partie basse de l'ecran
-		            	print_blue.setVisibility(View.VISIBLE);
+//		            	print_blue.setVisibility(View.VISIBLE);
+		            	print_blue.setVisibility(View.GONE);
+		            	animate(R.id.print_blue, R.drawable.animation_bleu);
 		            }
 		            break;
 		        }
@@ -80,12 +85,13 @@ public class Scanner extends Activity {
 		            
 		            if(0<y && y<yMax/2){
 		            	//Partie haute de l'ecran
-		            	print_red.setVisibility(View.VISIBLE);
+//		            	print_red.setVisibility(View.VISIBLE);
+		            	animate(R.id.print_red, R.drawable.animation_red);
 		            }else if(yMax/2<y && y<yMax){
 		            	//Partie basse de l'ecran
-		            	print_blue.setVisibility(View.VISIBLE);
+//		            	print_blue.setVisibility(View.VISIBLE);
+		            	animate(R.id.print_blue, R.drawable.animation_bleu);
 		            }
-		            
 		            break;
 		        }
 		        
@@ -101,23 +107,50 @@ public class Scanner extends Activity {
 		        }
 		        
 		        case MotionEvent.ACTION_POINTER_UP: {
-		        	
 		            final float y = ev.getY();
-		            
 		            if(0<y && y<yMax/2){
 		            	//Partie haute de l'ecran
 //		            	print.setVisibility(View.INVISIBLE);
 		            }else if(yMax/2<y && y<yMax){
 		            	//Partie basse de l'ecran
-		            	
 		            }
-		            
 		            break;
 		        }
 	        }
 	        return true;
 		}
     };
+    
+    private void animate(int imageViewId, int animationId){
+//		sensorMgr.unregisterListener(this);
+		
+		Runnable registerSensorRunnable = new Runnable(){
+			@Override
+			public void run() {
+//				sensorMgr.registerListener(Cloche.this, mAccelerometer, SensorManager.SENSOR_ACCELEROMETER);
+			}
+		};
+		
+		ImageView imgView = (ImageView)findViewById(imageViewId);
+		imgView.setVisibility(ImageView.VISIBLE);
+		imgView.setBackgroundResource(animationId);
+		
+		registerAnimation(imageViewId, registerSensorRunnable);
+		
+	}
+
+	private void registerAnimation(int id, final Runnable cb){
+		final ImageView imgView = (ImageView)findViewById(id);
+		final CustomAnimationDrawable aniDrawable = new CustomAnimationDrawable((AnimationDrawable)imgView.getBackground());
+		imgView.setBackgroundDrawable(aniDrawable);
+
+		aniDrawable.setOnFinishCallback(cb);
+		
+		if(!aniDrawable.isRunning()){
+			aniDrawable.start();
+		}
+	}
+    
     
     @Override
 	public void onConfigurationChanged(Configuration newConfig) {

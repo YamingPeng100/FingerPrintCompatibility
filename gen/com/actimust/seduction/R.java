@@ -11,9 +11,15 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int icon=0x7f020000;
-        public static final int print_blue=0x7f020001;
-        public static final int print_red=0x7f020002;
+        public static final int animation_bleu=0x7f020000;
+        public static final int animation_red=0x7f020001;
+        public static final int cadre_bleu_avec_print=0x7f020002;
+        public static final int cadre_bleu_sans_print=0x7f020003;
+        public static final int cadre_red_avec_print=0x7f020004;
+        public static final int cadre_red_sans_print=0x7f020005;
+        public static final int icon=0x7f020006;
+        public static final int lum_cadre_bleu_avec_print=0x7f020007;
+        public static final int lum_cadre_red_avec_print=0x7f020008;
     }
     public static final class id {
         public static final int mainLayout=0x7f050000;

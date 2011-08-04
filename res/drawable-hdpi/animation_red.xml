@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/cadre_red_sans_print" android:duration="500" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="500" />
+    <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="500" />
+    <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/lum_cadre_red_avec_print" android:duration="100" />
+    <item android:drawable="@drawable/cadre_red_avec_print" android:duration="100" />
+    
+    
+    
+</animation-list>
