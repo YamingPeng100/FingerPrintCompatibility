@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 public class Resultat extends Activity {
+	
+	private TextView resultat;
 	
 	 /** Called when the activity is first created. */
     @Override
@@ -18,6 +21,26 @@ public class Resultat extends Activity {
         
         setContentView(R.layout.resultat);
         
+        resultat = (TextView) findViewById(R.id.resultat);
+        
+        choisirUnResultat();
+        
+        
     }
+    
+    private void choisirUnResultat() {
+		switch(generateRandomBetween(1, 6)){
+		case 1 : resultat.setText(R.string.r1);break;
+		case 2 : resultat.setText(R.string.r2);break;
+		case 3 : resultat.setText(R.string.r3);break;
+		case 4 : resultat.setText(R.string.r4);break;
+		case 5 : resultat.setText(R.string.r5);break;
+		case 6 : resultat.setText(R.string.r6);break;
+		
+		}
+	}
 
+	private int generateRandomBetween(int x,int y){
+    	return x + (int)(Math.random() * ((y - x) + 1));
+    }
 }

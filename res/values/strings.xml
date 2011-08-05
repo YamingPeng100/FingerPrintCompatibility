@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Finger Compatibility</string>
-    <string name="r1">GAGNE</string>
-    
+    <string name="r1">Passionate attraction to one another is strong and delicious. You are destined to live great moments of passion.</string>
+	<string name="r2">Although you don\'t want to show it, you are completely drawn to each other. live and enjoy the moment.</string>
+	<string name="r3">A lively and combative Relationship where there is no room for boredom is about to born. You are an energetic couple.</string>
+    <string name="r4">You feel a mutual fascination, you radiate positive energy and passion when you are together.</string>
+    <string name="r5">You were born to be together. A union based on balance and respect that can be very durable.</string>
+    <string name="r6">No matter what you tell yourselves, the sexual energies between you are highly charged.</string>
 </resources>

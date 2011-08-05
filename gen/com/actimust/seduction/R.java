@@ -22,12 +22,12 @@ public final class R {
         public static final int lum_cadre_red_avec_print=0x7f020008;
     }
     public static final class id {
-        public static final int InnerRelativeLayoutBleu=0x7f050003;
-        public static final int InnerRelativeLayoutRed=0x7f050001;
-        public static final int inBankAccount=0x7f050005;
-        public static final int mainLayout=0x7f050000;
-        public static final int print_blue=0x7f050004;
-        public static final int print_red=0x7f050002;
+        public static final int InnerRelativeLayoutBleu=0x7f060003;
+        public static final int InnerRelativeLayoutRed=0x7f060001;
+        public static final int mainLayout=0x7f060000;
+        public static final int print_blue=0x7f060004;
+        public static final int print_red=0x7f060002;
+        public static final int resultat=0x7f060005;
     }
     public static final class layout {
         public static final int fingers_main=0x7f030000;
@@ -36,5 +36,13 @@ public final class R {
     public static final class string {
         public static final int app_name=0x7f040000;
         public static final int r1=0x7f040001;
+        public static final int r2=0x7f040002;
+        public static final int r3=0x7f040003;
+        public static final int r4=0x7f040004;
+        public static final int r5=0x7f040005;
+        public static final int r6=0x7f040006;
+    }
+    public static final class style {
+        public static final int WhiteBoldText=0x7f050000;
     }
 }
