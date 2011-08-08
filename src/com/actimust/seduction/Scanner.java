@@ -2,18 +2,25 @@ package com.actimust.seduction;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.drawable.AnimationDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class Scanner extends Activity {
 	
@@ -43,7 +50,68 @@ public class Scanner extends Activity {
         
     }
     
-    private View.OnTouchListener onTouchListener = new View.OnTouchListener(){
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+      switch (item.getItemId()) {
+	      case R.id.autresApplisId:
+	    	  showListApp();
+	          return true;
+	      case R.id.about:
+	    	  showAbout();
+	    	  return true;
+	      case R.id.settings:
+//	    	  startActivity(new Intent(this, Settings.class));
+	    	  Intent myIntent = new Intent(this, Settings.class);
+              startActivity(myIntent);
+			  return true;
+	      default:
+	        return super.onContextItemSelected(item);
+      }
+    }
+    
+    private void showAbout() {
+    	Toast.makeText(getApplicationContext(), "By actimust.com", Toast.LENGTH_LONG).show();
+		
+	}
+
+	private void showListApp() {
+    	final CharSequence[] items = {"Make Money", "Cloche"};
+
+    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    	builder.setTitle("Other Applications:");
+    	builder.setItems(items, new DialogInterface.OnClickListener() {
+    	    public void onClick(DialogInterface dialog, int item) {
+    	    	switch (item) {
+				case 0:
+					openAppDetailsPage("market://details?id=fr.first");
+					break;
+				case 1:
+					openAppDetailsPage("market://details?id=com.actimust");
+					break;
+				default:
+					break;
+				}
+    	    }
+    	});
+    	AlertDialog alert = builder.create();
+    	alert.show();
+		
+	}
+    
+    private void openAppDetailsPage(String uri){
+    	Intent intent = new Intent(Intent.ACTION_VIEW);
+    	intent.setData(Uri.parse(uri));
+    	startActivity(intent);
+    }
+
+	private View.OnTouchListener onTouchListener = new View.OnTouchListener(){
 
 		@Override
 		public boolean onTouch(View v, MotionEvent ev) {

@@ -7,4 +7,8 @@
     <string name="r4">You feel a mutual fascination, you radiate positive energy and passion when you are together.</string>
     <string name="r5">You were born to be together. A union based on balance and respect that can be very durable.</string>
     <string name="r6">No matter what you tell yourselves, the sexual energies between you are highly charged.</string>
+	<string name="autres_app">Other App</string>
+	<string name="about_button">About</string>
+	<string name="settings_label">Settings</string>
+	<string name="settings_explainations">Set your own result: </string>
 </resources>

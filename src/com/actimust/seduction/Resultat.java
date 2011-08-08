@@ -1,6 +1,8 @@
 package com.actimust.seduction;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,7 +25,15 @@ public class Resultat extends Activity {
         
         resultat = (TextView) findViewById(R.id.resultat);
         
-        choisirUnResultat();
+        SharedPreferences settings = getSharedPreferences("pref",0);
+        int customResultEnabled  = settings.getInt("customResultEnabled", 1);
+        
+        if(customResultEnabled == R.id.radio_enable){
+        	resultat.setText(settings.getString("result", ""));
+        }else{
+        	choisirUnResultat();
+        }
+        
         
         
     }

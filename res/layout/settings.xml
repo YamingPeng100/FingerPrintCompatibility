@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  	<TextView android:id="@+id/settings_explainations"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/settings_explainations"
+			android:textSize="25sp"
+			android:layout_marginTop="20dip"
+			 />
+	<EditText
+        	android:id="@+id/custom_result"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@android:drawable/editbox_background"
+	        android:layout_below="@id/settings_explainations"
+	        android:layout_marginTop="20dip"/>
+  	<RadioGroup
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:layout_below="@id/custom_result"
+		      android:layout_marginTop="20dip"
+		      android:id="@+id/radio_group"
+		      android:orientation="vertical">
+		    	<RadioButton android:id="@+id/radio_enable"
+		          android:layout_width="wrap_content"
+		          android:layout_height="wrap_content"
+		          android:text="enable" />
+		    	<RadioButton android:id="@+id/radio_disable"
+		          android:layout_width="wrap_content"
+		          android:layout_height="wrap_content"
+		          android:text="disable" />
+    </RadioGroup>
+    
+    <Button android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+    		android:id="@+id/button_settings"
+    		android:text="Save"
+    		android:layout_below="@id/radio_group"
+    		android:layout_marginTop="20dip"/>
+  	
+  
+  	
+	  
+  </RelativeLayout>
