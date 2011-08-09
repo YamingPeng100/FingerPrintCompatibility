@@ -22,21 +22,22 @@ public final class R {
         public static final int lum_cadre_red_avec_print=0x7f020008;
     }
     public static final class id {
-        public static final int InnerRelativeLayoutBleu=0x7f070003;
+        public static final int InnerRelativeLayoutAd=0x7f070004;
         public static final int InnerRelativeLayoutRed=0x7f070001;
-        public static final int about=0x7f07000e;
-        public static final int autresApplisId=0x7f07000c;
-        public static final int button_settings=0x7f07000b;
-        public static final int custom_result=0x7f070007;
+        public static final int about=0x7f07000f;
+        public static final int adView=0x7f070005;
+        public static final int autresApplisId=0x7f07000d;
+        public static final int button_settings=0x7f07000c;
+        public static final int custom_result=0x7f070008;
         public static final int mainLayout=0x7f070000;
-        public static final int print_blue=0x7f070004;
+        public static final int print_blue=0x7f070003;
         public static final int print_red=0x7f070002;
-        public static final int radio_disable=0x7f07000a;
-        public static final int radio_enable=0x7f070009;
-        public static final int radio_group=0x7f070008;
-        public static final int resultat=0x7f070005;
-        public static final int settings=0x7f07000d;
-        public static final int settings_explainations=0x7f070006;
+        public static final int radio_disable=0x7f07000b;
+        public static final int radio_enable=0x7f07000a;
+        public static final int radio_group=0x7f070009;
+        public static final int resultat=0x7f070006;
+        public static final int settings=0x7f07000e;
+        public static final int settings_explainations=0x7f070007;
     }
     public static final class layout {
         public static final int fingers_main=0x7f030000;

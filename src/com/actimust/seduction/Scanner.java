@@ -67,7 +67,6 @@ public class Scanner extends Activity {
 	    	  showAbout();
 	    	  return true;
 	      case R.id.settings:
-//	    	  startActivity(new Intent(this, Settings.class));
 	    	  Intent myIntent = new Intent(this, Settings.class);
               startActivity(myIntent);
 			  return true;
@@ -194,7 +193,6 @@ public class Scanner extends Activity {
 		Runnable registerSensorRunnable = new Runnable(){
 			@Override
 			public void run() {
-//				sensorMgr.registerListener(Cloche.this, mAccelerometer, SensorManager.SENSOR_ACCELEROMETER);
 			}
 		};
 		

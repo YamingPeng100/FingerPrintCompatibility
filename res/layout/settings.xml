@@ -7,12 +7,20 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
   
+  	<com.google.ads.AdView android:id="@+id/adView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        ads:adUnitId="a14e3405163d9c3"
+                        ads:adSize="BANNER"
+                        ads:loadAdOnCreate="true"/>
+  
   	<TextView android:id="@+id/settings_explainations"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/settings_explainations"
 			android:textSize="25sp"
 			android:layout_marginTop="20dip"
+			android:layout_below="@id/adView"
 			 />
 	<EditText
         	android:id="@+id/custom_result"
