@@ -10,7 +10,7 @@
   	<com.google.ads.AdView android:id="@+id/adView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        ads:adUnitId="a14e3405163d9c3"
+                        ads:adUnitId="a14e412383caa5b"
                         ads:adSize="BANNER"
                         ads:loadAdOnCreate="true"/>
   	<TextView android:id="@+id/resultat"
