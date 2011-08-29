@@ -11,4 +11,6 @@
 	<string name="about_button">About</string>
 	<string name="settings_label">Settings</string>
 	<string name="settings_explainations">Set your own result: </string>
+	<string name="explication">Both of the users must hold one finger in the same time in the two scan areas to enable the analysis. </string>
+	<string name="start">Start</string>
 </resources>

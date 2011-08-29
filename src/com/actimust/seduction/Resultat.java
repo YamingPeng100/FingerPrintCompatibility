@@ -2,6 +2,8 @@ package com.actimust.seduction;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -52,4 +54,10 @@ public class Resultat extends Activity {
 	private int generateRandomBetween(int x,int y){
     	return x + (int)(Math.random() * ((y - x) + 1));
     }
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+	    super.onConfigurationChanged(newConfig);
+	    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+	}
 }
