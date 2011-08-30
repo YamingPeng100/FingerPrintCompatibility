@@ -20,21 +20,37 @@
 		    android:layout_height="wrap_content" 
 		    android:text="@string/explication"
 		    android:gravity="center"
-		    android:paddingTop="100dip"
-		    android:paddingLeft="10dip"
 		    android:background="@drawable/nine_rouge"
-		    style="@style/WhiteBoldText" />
+		    style="@style/WhiteBoldText" android:layout_margin="20dip"/>
 		    
+		
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/buttonInnerRelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeInnerRelativeLayout">
+    
+		<ImageView android:layout_height="wrap_content"
+				   android:layout_width="wrap_content" 
+				   android:src="@drawable/illustration" 
+				   android:id="@+id/illustration" 
+				   android:layout_marginTop="20dp"
+				   android:gravity="center"
+				   android:layout_centerInParent="true" />
+				   
 		<Button 
 			android:layout_height="wrap_content" 
 			android:layout_width="fill_parent"
 			android:id="@+id/button_start" 
 			android:text="@string/start"
 			android:paddingTop="20dip"
-			android:layout_margin="50dip" />
-		
-    </RelativeLayout>
-    
+			android:layout_margin="50dip"
+			android:layout_below="@id/illustration" />
+			
+	 </RelativeLayout>
+	
      <RelativeLayout 
         android:id="@+id/homeInnerRelativeLayoutAd"
         android:layout_width="wrap_content"
