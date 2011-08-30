@@ -20,7 +20,9 @@
 			android:padding="10dip"
 			android:textSize="30sp"
 			style="@style/WhiteBoldText"
-			android:layout_below="@id/adView"/>
+			android:layout_below="@id/adView"
+			android:background="@drawable/nine_rouge"
+			android:layout_centerHorizontal="true"/>
   	
   	
   

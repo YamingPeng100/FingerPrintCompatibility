@@ -81,7 +81,7 @@ public class Scanner extends Activity {
 	}
 
 	private void showListApp() {
-    	final CharSequence[] items = {"Make Money", "Cloche"};
+    	final CharSequence[] items = {"Make Money", "Cloche", "Hand gun Reality fps"};
 
     	AlertDialog.Builder builder = new AlertDialog.Builder(this);
     	builder.setTitle("Other Applications:");
@@ -93,6 +93,9 @@ public class Scanner extends Activity {
 					break;
 				case 1:
 					openAppDetailsPage("market://details?id=com.actimust");
+					break;
+				case 2:
+					openAppDetailsPage("market://details?id=com.actimust.fps");
 					break;
 				default:
 					break;

@@ -21,7 +21,10 @@
 		    android:text="@string/explication"
 		    android:gravity="center"
 		    android:background="@drawable/nine_rouge"
-		    style="@style/WhiteBoldText" android:layout_margin="20dip"/>
+		    style="@style/WhiteBoldText" 
+		    android:layout_margin="2dip"
+		    android:paddingTop="10dip"
+		    android:paddingBottom="10dip"/>
 		    
 		
     </RelativeLayout>
@@ -36,18 +39,44 @@
 				   android:layout_width="wrap_content" 
 				   android:src="@drawable/illustration" 
 				   android:id="@+id/illustration" 
-				   android:layout_marginTop="20dp"
+				   android:layout_marginTop="2dp"
 				   android:gravity="center"
-				   android:layout_centerInParent="true" />
+				   android:layout_centerHorizontal="true" />
 				   
 		<Button 
 			android:layout_height="wrap_content" 
 			android:layout_width="fill_parent"
 			android:id="@+id/button_start" 
 			android:text="@string/start"
-			android:paddingTop="20dip"
-			android:layout_margin="50dip"
-			android:layout_below="@id/illustration" />
+			android:layout_margin="2dip"
+			android:layout_below="@id/illustration"
+			android:layout_centerHorizontal="true" />
+			
+		<Button 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:id="@+id/button_settings" 
+			android:text="@string/settings_label"
+			android:layout_margin="2dip"
+			android:layout_below="@id/button_start"
+			android:layout_centerHorizontal="true" />
+			
+		<Button 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:id="@+id/button_otherApps" 
+			android:text="@string/autres_app"
+			android:layout_margin="2dip"
+			android:layout_below="@id/button_settings"
+			android:layout_centerHorizontal="true" />
+		<Button 
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+			android:id="@+id/button_share" 
+			android:text="@string/share"
+			android:layout_margin="2dip"
+			android:layout_below="@id/button_otherApps"
+			android:layout_centerHorizontal="true" />
 			
 	 </RelativeLayout>
 	

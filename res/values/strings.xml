@@ -13,4 +13,6 @@
 	<string name="settings_explainations">Set your own result: </string>
 	<string name="explication">Both of the users must hold one finger in the same time in the two scan areas to enable the analysis. </string>
 	<string name="start">Start</string>
+	<string name="share">Share</string>
+	<string name="share_message">Have a lot of fun with a great fingerprint scanner, Fingerprint Compatibility: </string>
 </resources>
