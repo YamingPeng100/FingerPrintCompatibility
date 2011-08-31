@@ -7,13 +7,14 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
   
-  	<com.google.ads.AdView android:id="@+id/adView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        ads:adUnitId="a14e412383caa5b"
-                        ads:adSize="BANNER"
-                        ads:loadAdOnCreate="true"/>
-  	<TextView android:id="@+id/resultat"
+  <RelativeLayout
+	  xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent">
+  
+  	  <TextView android:id="@+id/resultat"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:gravity="center"
@@ -23,9 +24,25 @@
 			android:layout_below="@id/adView"
 			android:background="@drawable/nine_rouge"
 			android:layout_centerHorizontal="true"/>
+  
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/InnerRelativeLayoutAd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
+        android:layout_centerHorizontal="true">
+  
+	  	<com.google.ads.AdView android:id="@+id/adView"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        ads:adUnitId="a14e412383caa5b"
+	                        ads:adSize="BANNER"
+	                        ads:loadAdOnCreate="true"/>
   	
   	
   
   	
-	  
+	   </RelativeLayout>
   </RelativeLayout>
